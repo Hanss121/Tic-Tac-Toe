@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
   let gameActive = true;
   let playerSymbol = "X";
-  let aiSymbol = "X";
+  let aiSymbol = "O";
   let difficulty = "easy";
 
   const playerImages = {
