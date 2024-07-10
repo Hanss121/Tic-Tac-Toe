@@ -61,3 +61,49 @@ body {
   border: 2px solid #ffffff;
   color: white;
 }
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.falling-object {
+  width: 50px;
+  position: absolute;
+  top: -50px;
+  animation: fall 10s linear infinite;
+}
+@keyframes rainbow-ring {
+  0% {
+    box-shadow: 0 0 0 3px blue;
+  }
+  25% {
+    box-shadow: 0 0 0 3px orange;
+  }
+  50% {
+    box-shadow: 0 0 0 3px yellow;
+  }
+  75% {
+    box-shadow: 0 0 0 3px green;
+  }
+  100% {
+    box-shadow: 0 0 0 3px red;
+  }
+}
+
+.difficulty-btn {
+  transition: box-shadow 0.3s ease;
+}
+
+.difficulty-btn:hover {
+  animation: rainbow-ring 2s infinite;
+}
+.warna {
+  animation: rainbow-ring 3s infinite;
+}
+.warna-1:hover {
+  animation: rainbow-ring 2s infinite;
+}

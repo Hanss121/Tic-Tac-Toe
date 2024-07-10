@@ -13,7 +13,14 @@
     <audio id="click-sound1" src="musik/klik2.mp3"></audio>
     <audio id="background-music" src="musik/bgsound1.mp3" autoplay loop></audio>
     <div class="w-full text-center h-[100vh]" style="background-image: url('img/bg.jpg')">
-      <div class="w-full" id="menu">
+      <div id="container" class="fixed w-full h-full overflow-hidden">
+        <!-- animation-->
+      </div>
+      <img src="img/O.png" class="animate-spin-slow w-[50px] absolute ml-[100px] mt-[100px]" alt="" />
+      <img src="img/X.png" class="animate-spin-slow w-[50px] absolute ml-[250px] mt-[500px]" alt="" />
+      <img src="img/O.png" class="animate-spin-slow w-[50px] absolute ml-[1100px] mt-[500px]" alt="" />
+      <img src="img/X.png" class="animate-spin-slow w-[50px] absolute ml-[1000px] mt-[100px]" alt="" />
+      <div class="w-full absolute" id="menu">
         <h1 class="text-[80px] font-extrabold text mt-3" style="text-shadow: 3px 5px beige">TIC-TAC-TOE</h1>
         <h1 class="text-[50px] text-white font-bold" style="text-shadow: 3px 5px rgb(4, 0, 255)">MAIN MENU</h1>
         <div class="flex justify-end w-full">
@@ -22,30 +29,30 @@
         <h1 class="text-[30px] font-medium text-white mb-5">PILIH MODE TINGKATAN</h1>
         <div class="flex justify-evenly">
           <div>
-            <button onclick="playClickSound()" class="symbol-btn w-[100px] ring-2 ring-blue-500 h-[100px] bg-white hover:border-4 border-blue-500 hover:text-white rounded-md" data-symbol="X">
-              <img src="img/X.png" alt="X" data-symbol="X" class="w-full symbol-btn h-full object-contain" />
+            <button onclick="playClickSound()" class="symbol-btn warna-1 w-[100px] ring-2 ring-blue-500 h-[100px] bg-white rounded-md" data-symbol="X">
+              <img src="img/X.png" alt="X" data-symbol="X" class="w-full symbol-btn rounded-md h-full object-contain" />
             </button>
           </div>
           <div>
             <div class="flex flex-col">
-              <button onclick="playClickSound()" class="difficulty-btn py-2 px-3 mb-3 font-bold bg-white rounded-md w-[200px] hover:bg-blue-100 hover:ring-2 ring-blue-500" data-difficulty="easy">Easy</button>
+              <button onclick="playClickSound()" class="difficulty-btn py-2 px-3 mb-3 font-bold bg-white rounded-md w-[200px]" data-difficulty="easy">Easy</button>
               <button onclick="playClickSound()" class="difficulty-btn py-2 px-3 mb-3 font-bold bg-white rounded-md w-[200px] hover:bg-blue-100 hover:ring-2 ring-blue-500" data-difficulty="medium">Medium</button>
               <button onclick="playClickSound()" class="difficulty-btn py-2 px-3 mb-3 font-bold bg-white rounded-md w-[200px] hover:bg-blue-100 hover:ring-2 ring-blue-500" data-difficulty="hard">Hard</button>
             </div>
           </div>
           <div class="">
-            <button onclick="playClickSound()" class="symbol-btn w-[100px] h-[100px] bg-white hover:border-4 ring-2 ring-blue-500 border-blue-500 hover:text-white rounded-md" data-symbol="O">
-              <img src="img/O.png" alt="O" data-symbol="O" class="w-full symbol-btn h-full object-contain" />
+            <button onclick="playClickSound()" class="symbol-btn warna-1 w-[100px] h-[100px] bg-white ring-2 ring-blue-500 rounded-md" data-symbol="O">
+              <img src="img/O.png" alt="O" data-symbol="O" class="w-full rounded-md symbol-btn h-full object-contain" />
             </button>
           </div>
         </div>
-        <button onclick="playClickSound()" class="border-4 text-white animate-color-change border-white font-bold hover:bg-lime-400 hover:ring-2 rounded-sm ring-blue-500 hover:text-black" id="startGameBtn">Mulai Permainan >>></button>
+        <button onclick="playClickSound()" class="border-4 text-white animate-color-change rounded-md border-white font-bold hover:bg-lime-400 hover:ring-2 ring-blue-500 hover:text-black" id="startGameBtn">Mulai Permainan >>></button>
       </div>
       <div id="game" style="display: none">
         <h1 class="text-[70px] font-extrabold text mt-3 mb-5" style="text-shadow: 3px 5px beige">TIC-TAC-TOE</h1>
         <div class="container">
           <div class="flex justify-center rounded-lg w-[100vw]">
-            <div class="board bg-slate-100 ring-2 ring-blue-500 rounded-md p-2" id="board">
+            <div class="board bg-slate-100 bg-opacity-40 ring-2 warna rounded-md p-2" id="board">
               <div class="win-line" id="winLine"></div>
               <div onclick="playClickSound1()" class="cell hover:bg-blue-200 bg-white" data-index="0"></div>
               <div onclick="playClickSound1()" class="cell hover:bg-blue-200 bg-white" data-index="1"></div>
@@ -70,5 +77,6 @@
       </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/view.js"></script>
   </body>
 </html>

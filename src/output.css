@@ -715,27 +715,28 @@ video {
   clear: none;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.my-\[50\%\] {
-  margin-top: 50%;
-  margin-bottom: 50%;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .mb-3 {
   margin-bottom: 0.75rem;
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.ml-\[1000px\] {
+  margin-left: 1000px;
+}
+
+.ml-\[100px\] {
+  margin-left: 100px;
+}
+
+.ml-\[1100px\] {
+  margin-left: 1100px;
+}
+
+.ml-\[250px\] {
+  margin-left: 250px;
 }
 
 .mr-14 {
@@ -748,6 +749,14 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[500px\] {
+  margin-top: 500px;
 }
 
 .box-border {
@@ -865,6 +874,14 @@ video {
   height: 100%;
 }
 
+.h-\[130px\] {
+  height: 130px;
+}
+
+.h-\[10px\] {
+  height: 10px;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
@@ -977,6 +994,24 @@ video {
 
 .animate-color-change {
   animation: colorChange 4s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
 }
 
 .touch-auto {
@@ -1761,10 +1796,6 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -1918,6 +1949,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-15 {
+  --tw-bg-opacity: 0.15;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2040,11 +2079,6 @@ video {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-2 {
@@ -2271,6 +2305,10 @@ video {
 .subpixel-antialiased {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+.opacity-25 {
+  opacity: 0.25;
 }
 
 .bg-blend-normal {
