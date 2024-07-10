@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPlayer = "X";
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
   let gameActive = true;
-  let playerSymbol = "O";
+  let playerSymbol = "X";
   let aiSymbol = "X";
   let difficulty = "easy";
 
@@ -268,3 +268,10 @@ function toggleMusic() {
     button.textContent = "🔇"; // Ikon untuk suara mati
   }
 }
+window.addEventListener("load", function () {
+  var music = document.getElementById("background-music");
+  var button = document.getElementById("speaker-button");
+  music.play().catch(() => {
+    button.textContent = "🔇"; // Ikon untuk suara mati jika autoplay dicegah
+  });
+});
