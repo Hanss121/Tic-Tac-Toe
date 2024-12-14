@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  position: relative;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #5fe400;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#restartBtn,
+#startGameBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.win-line {
+  position: absolute;
+  width: 300px;
+  height: 10px;
+  background-color: red;
+  top: 0px;
+  left: 0px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.symbol-btn,
+.difficulty-btn {
+  cursor: pointer;
+}
+
+.symbol-btn.active,
+.difficulty-btn.active {
+  background-color: #5fe400; /* Hijau untuk simbol aktif */
+  border: 2px solid #ffffff;
+  color: white;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.falling-object {
+  width: 50px;
+  position: absolute;
+  top: -50px;
+  animation: fall 10s linear infinite;
+}
+@keyframes rainbow-ring {
+  0% {
+    box-shadow: 0 0 0 3px blue;
+  }
+  25% {
+    box-shadow: 0 0 0 3px orange;
+  }
+  50% {
+    box-shadow: 0 0 0 3px yellow;
+  }
+  75% {
+    box-shadow: 0 0 0 3px green;
+  }
+  100% {
+    box-shadow: 0 0 0 3px red;
+  }
+}
+
+.difficulty-btn {
+  transition: box-shadow 0.3s ease;
+}
+
+.difficulty-btn:hover {
+  animation: rainbow-ring 2s infinite;
+}
+.warna {
+  animation: rainbow-ring 3s infinite;
+}
+.warna-1:hover {
+  animation: rainbow-ring 2s infinite;
+}
